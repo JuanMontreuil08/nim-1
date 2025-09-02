@@ -2,23 +2,42 @@
 import { TextMorph } from '@/components/ui/text-morph'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 function CopyButton() {
   const [text, setText] = useState('Copy')
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
+  const pathname = usePathname()
+  
+  const getCurrentUrl = () => {
+    if (typeof window !== 'undefined') {
+      return window.location.href
+    }
+    // Fallback for server-side rendering
+    return `https://www.juanmontreuil.com${pathname}`
+  }
+
+  const handleCopy = async () => {
+    try {
+      const currentUrl = getCurrentUrl()
+      await navigator.clipboard.writeText(currentUrl)
+      setText('Copied')
+    } catch (err) {
+      console.error('Failed to copy URL:', err)
+      setText('Error')
+    }
+  }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setText('Copy')
     }, 2000)
+    
+    return () => clearTimeout(timer)
   }, [text])
 
   return (
     <button
-      onClick={() => {
-        setText('Copied')
-        navigator.clipboard.writeText(currentUrl)
-      }}
+      onClick={handleCopy}
       className="font-base flex items-center gap-1 text-center text-sm text-zinc-500 transition-colors dark:text-zinc-400"
       type="button"
     >
