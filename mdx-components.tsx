@@ -10,10 +10,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       alt,
       caption,
       size = 'full',
+      height,
     }: {
       src: string
       alt: string
       caption: string
+      height?: string
       size?: 'tiny' | 'xs' | 'small' | 'medium' | 'blog' | 'full'
     }) => {
       const sizeClasses = {
@@ -31,6 +33,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             src={src} 
             alt={alt} 
             className={`rounded-xl ${sizeClasses[size]}`} 
+            style={height ? { height } : undefined}
           />
           <figcaption className="text-center">{caption}</figcaption>
         </figure>

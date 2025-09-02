@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
 
     video:
       'https://www.youtube.com/watch?v=pT0lDFDprIg',
-    image: '/trigger.png', // Add image path
+    image: 'https://res.cloudinary.com/dncjapapu/image/upload/v1756779337/trigger_vnmq8l.png', // Add image path
     github: 'https://github.com/JuanMontreuil08/bloomberg-originals-video-tracker', // Add GitHub repository link
     id: 'project1',
   },
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     description: 'An AI-powered investment agent that analyzes portfolios, market data, and news, delivering personalized insights directly through email and voice.',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
-    image: '/architecture.png', // Add image path
+    image: 'https://res.cloudinary.com/dncjapapu/image/upload/v1756779335/architecture_ttufsy.png', // Add image path
     github: 'https://github.com/JuanMontreuil08/stock-guru-api', // Add GitHub repository link
     id: 'project2',
   },
@@ -88,13 +88,6 @@ export const BLOG_POSTS: BlogPost[] = [
     description: 'Here’s my full experience in Colombia — tech, people, and culture all rolled into one!',
     link: '/blog/ai-hackathon-experience-bogota-fiable',
     uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
   },
 ]
 
