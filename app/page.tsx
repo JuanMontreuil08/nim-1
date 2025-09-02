@@ -234,7 +234,7 @@ export default function Personal() {
                 <div className="flex items-center gap-2 mb-1">
                   <a
                     className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                    href={project.link}
+                    href={project.github}
                     target="_blank"
                   >
                     {project.name}
