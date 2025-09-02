@@ -86,7 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: '🚀 My AI Hackathon Experience in Bogotá – Building FIABLE',
     description: 'Here’s my full experience in Colombia — tech, people, and culture all rolled into one!',
-    link: '/blog/ai-hackathon-experience-bogota-fiable',
+    link: '/blog/ai-hackathon-experience-bogota',
     uid: 'blog-1',
   },
 ]
