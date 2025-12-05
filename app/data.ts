@@ -21,6 +21,7 @@ type BlogPost = {
   description: string
   link: string
   uid: string
+  date: string
 }
 
 type SocialLink = {
@@ -83,11 +84,20 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
+    {
+    title: '🇵🇪 Co-organizing my first AI Hackathon in Lima',
+    description: 'A group of geeks joined forces to create a one-of-a-kind hackathon in Lima.',
+    link: '/blog/ai-hackathon-lima',
+    uid: 'blog-2',
+    date: 'Nov-2025'
+  },
+  
   {
     title: '🚀 My AI Hackathon Experience in Bogotá – Building FIABLE',
     description: 'Here’s my full experience in Colombia — tech, people, and culture all rolled into one!',
-    link: '/blog/ai-hackathon-experience-bogota',
+    link: '/blog/ai-hackathon-bogota',
     uid: 'blog-1',
+    date: 'Aug-2025'
   },
 ]
 

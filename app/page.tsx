@@ -317,10 +317,18 @@ export default function Personal() {
                 href={post.link}
                 data-id={post.uid}
               >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
+                <div className="flex flex-col space-y-1 w-full">
+                  <div className="flex items-center gap-4 w-full">
+                    <h4 className="font-normal dark:text-zinc-100 truncate flex-1 min-w-0">
+                      {post.title}
+                    </h4>
+                    <time
+                      className="text-sm text-zinc-400 dark:text-zinc-500 whitespace-nowrap ml-auto"
+                      dateTime={post.date}
+                    >
+                      {post.date}
+                    </time>
+                  </div>
                   <p className="text-zinc-500 dark:text-zinc-400">
                     {post.description}
                   </p>
